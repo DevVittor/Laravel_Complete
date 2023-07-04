@@ -14,7 +14,6 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-
             <div>
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
@@ -39,9 +38,13 @@
                     </a>
                 @endif
 
-                <x-button class="ml-4">
+                <x-button class="ml-4 bg-red-500">
                     {{ __('Log in') }}
                 </x-button>
+                
+            </div>
+            <div class="flex justify-center items-center h-16 w-full bg-yellow-300 pt-3 pb-3">
+                <a href="{{ route('google-auth')}}">Google Login</a>
             </div>
         </form>
     </x-authentication-card>

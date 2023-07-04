@@ -2,9 +2,12 @@
 @section('title','ABRIME - Início')
 
 @section('content')
-
+    
     <main class="font-inter bg-black">
-        <section    >
+        <section>
+            <App/>
+        </section>
+        <section>
             <div class="grid-banner">
                 <div class="container-banner">
                     <div class="box-banner"></div>

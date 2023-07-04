@@ -1,9 +1,11 @@
-import './bootstrap';
+import "./bootstrap";
+import { createApp } from "vue";
+import App from "./components/App.vue";
+import Likes from "./components/Likes.vue";
 
-import Alpine from 'alpinejs';
-import focus from '@alpinejs/focus';
-window.Alpine = Alpine;
+const app = createApp();
 
-Alpine.plugin(focus);
+app.component("app", App);
+app.component("likes", Likes);
 
-Alpine.start();
+app.mount("#app");

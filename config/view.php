@@ -33,4 +33,8 @@ return [
         realpath(storage_path('framework/views'))
     ),
 
+    /*
+    'compiled' => [
+        'path' => storage_path('framework/temp_views'),
+    ],*/
 ];

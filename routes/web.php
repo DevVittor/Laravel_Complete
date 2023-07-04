@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
+#use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\GoogleAuthController;
 
 Route::get('/', [EventController::class, 'index']);
 
@@ -21,3 +23,6 @@ Route::fallback(function () {
 });
 
 Route::get('/painel', [EventController::class, 'painel'])->middleware('auth');
+
+Route::get('auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
+Route::get('auth/google/callback', [GoogleAuthController::class, 'callbackGoogle']);

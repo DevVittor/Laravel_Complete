@@ -83,7 +83,7 @@
     }
     /*Header*/
     footer {
-        @apply sticky w-full z-50 bottom-0  bg-divs;
+        @apply w-full z-50   bg-divs;
     }
     .container-footer {
         @apply h-footeraltura flex justify-between  items-center border-t-2 border-gray pr-10 pl-10;

@@ -18,9 +18,11 @@
     @vite('resources/css/app.css')
     <title>@yield('title')</title>
 </head>
-<body>
+<body id="app">
     @include('header')
     @yield('content')
     @include('footer')
+
+    @vite('resources/js/app.js')
 </body>
 </html>
