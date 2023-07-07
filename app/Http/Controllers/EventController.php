@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-#use Illuminate\Database\QueryException;
 use App\Models\Event;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -44,7 +43,7 @@ class EventController extends Controller
         } else {
             return view('events.create', ['user_id' => $user_id, 'ids' => $ids]);
         }
-        #return view('events.create');
+        #return view('/events.create');
     }
     public function store(Request $request)
     {
@@ -90,21 +89,18 @@ class EventController extends Controller
     }
     public function painel()
     {
-
         $user_id = Auth::id();
-
-        #$ids = Event::where('user_id', $user_id)->get();
         $ids = Event::where('user_id', $user_id)->pluck('user_id');
 
         if (count($ids) > 0) {
             $all = Event::all();
         } else {
-            return redirect('/events.create');
+            return redirect('/events/create');
         }
 
-        #return view('/dashboard', ['user_id' => $user_id, 'ids' => $ids, 'all' => $all]);
-        return view('/painel', ['user_id' => $user_id, 'ids' => $ids, 'all' => $all]);
+        return view('painel', ['user_id' => $user_id, 'ids' => $ids, 'all' => $all]);
     }
+
     public function perfilCriado()
     {
         return view('/perfilCriado');

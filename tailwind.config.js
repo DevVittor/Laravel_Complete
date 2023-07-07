@@ -27,7 +27,6 @@ export default {
                 headerBlack: "#191825",
                 dark: "#32343b",
                 dark2: "#242430",
-                gray: "#F1F6F9",
                 gray2: "#DDE6ED",
                 divs: "#272930",
                 azul: "#2E6FFD",
@@ -42,13 +41,18 @@ export default {
                 footeraltura: "52px",
                 bannerPerfilAltura: "426px",
             },
+            maxHeight: {
+                alturamax: "792.4px",
+            },
+            minHeight: {
+                alturamax: "792.4px",
+            },
             maxWidth: {
                 maxCardImg: "1000px",
                 maximg: "288px",
             },
             borderColor: {
                 rosa: "#FF2171",
-                gray: "#32343b",
             },
             inset: {
                 perfil: "112px",

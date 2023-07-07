@@ -43,9 +43,6 @@
                 </x-button>
                 
             </div>
-            <div class="flex justify-center items-center h-16 w-full bg-yellow-300 pt-3 pb-3">
-                <a href="{{ route('google-auth')}}">Google Login</a>
-            </div>
         </form>
     </x-authentication-card>
 </x-guest-layout>

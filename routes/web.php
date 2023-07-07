@@ -2,11 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
-#use Laravel\Socialite\Facades\Socialite;
-use App\Http\Controllers\GoogleAuthController;
 
 Route::get('/', [EventController::class, 'index']);
-
 Route::get('/acompanhantes', [EventController::class, 'acompanhantes']);
 Route::get('/events/create', [EventController::class, 'create'])->middleware('auth');
 Route::get('/events/{user_id}', [EventController::class, 'show']);
@@ -24,5 +21,10 @@ Route::fallback(function () {
 
 Route::get('/painel', [EventController::class, 'painel'])->middleware('auth');
 
-Route::get('auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
-Route::get('auth/google/callback', [GoogleAuthController::class, 'callbackGoogle']);
+#Route::get('auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
+#Route::get('auth/google/callback', [GoogleAuthController::class, 'callbackGoogle']);
+
+Route::middleware('web')
+    ->group(function () {
+        Route::get('/', [EventController::class, 'index'])->name('home');
+    });
