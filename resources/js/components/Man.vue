@@ -1,6 +1,12 @@
 <script>
+import Locale from "/resources/js/components/Locale.vue";
+import Etapa3 from "/resources/js/components/cadastro/Etapa3.vue";
 export default {
     name: "App",
+    components: {
+        Locale,
+        Etapa3,
+    },
     data() {
         return {
             btnNext: false,
@@ -31,10 +37,10 @@ export default {
 </script>
 <template>
     <section>
-        <div class="h-alturamax flex justify-center items-center">
+        <div class="flex justify-center items-center bg-red-500 p-5">
             <div
                 v-show="div01"
-                class="h-auto w-auto p-5 rounded-xl gap-5 flex flex-col justify-center items-center bg-white"
+                class="h-auto w-auto border-2 border-gray-100 shadow-md p-5 rounded-xl gap-5 flex flex-col justify-center items-center bg-white"
             >
                 <div
                     class="border-2 border-gray-200 rounded-full h-64 w-64 flex justify-center items-center"
@@ -87,23 +93,31 @@ export default {
                 </div>
             </div>
             <!--Etapa02-->
-            <div class="flex justify-center items-center w-full" v-show="div02">
-                <div class="bg-blue-500 h-96 w-3/5 rounded-xl">
+            <div class="flex justify-start w-full" v-show="div02">
+                <div
+                    class="bg-white border-2 border-gray-100 shadow-md h-auto w-auto rounded-xl p-5 flex flex-col gap-2"
+                >
                     <div class="">
+                        <h2 class="text-black font-semibold text-3xl pb-2.5">
+                            Etapa 02
+                        </h2>
+                    </div>
+                    <div class="flex flex-col gap-2">
                         <label for="">Data de nascimento</label>
-                        <input type="date" name="" id="" />
+                        <input
+                            class="rounded-full pr-5 pl-5"
+                            type="date"
+                            name=""
+                            id=""
+                        />
                     </div>
                     <div class="">
-                        <label for="">Estado</label>
-                        <select name="estado" id="">
-                            <option value="" selected disabled>Escolha</option>
-                            <option value="Rio de Janeiro">
-                                Rio de Janeiro
-                            </option>
-                        </select>
+                        <Locale />
                     </div>
                 </div>
             </div>
+            <!---Etapa 03-->
+            <Etapa3 />
         </div>
     </section>
 </template>

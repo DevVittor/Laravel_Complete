@@ -35,7 +35,7 @@
             </div>
         </section>
         <section>
-            <div class="w-full m-auto columns-1 gap-3 2xl:columns-6 p-3 xl:columns-5 md:columns-4 sm:columns-3 bg-gray">
+            <div class="w-full m-auto columns-1 gap-3 2xl:columns-6 p-3 xl:columns-5 md:columns-4 sm:columns-3">
                 @foreach($profile as $items)
                 <a href="/events/{{$items->user_id}}">
                     <div class="mb-2.5 w-full break-inside-avoid">

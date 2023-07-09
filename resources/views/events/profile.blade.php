@@ -35,19 +35,14 @@
                                 <p class="font-light text-base">{{$user->description}}</p>
                             @endforeach
                         </div>
-                        <div class="w-full flex items-center gap-5 pt-5 flex-col md:flex-col  2xl:flex-row">
-                            <div class="">
-                                <nav>
-                                    <ul class="flex items-center justify-center  gap-3  text-white text-xl hover:cursor-pointer">
-                                        <li><a target="_blank" href="#"><i class="bi bi-facebook"></i></a></li>
-                                        <li><a target="_blank" href="#"><i class="bi bi-instagram"></i></a></li>
-                                        <li><a target="_blank" href="#"><i class="bi bi-twitter"></i></a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div class="">
-                                <Likes/>
-                            </div>
+                        <div class="w-full">
+                            <nav>
+                                <ul class="flex items-center justify-center md:justify-center  lg:justify-start 2xl:justify-start gap-3 pt-5 text-white text-xl hover:cursor-pointer">
+                                    <li><a target="_blank" href="#"><i class="bi bi-facebook"></i></a></li>
+                                    <li><a target="_blank" href="#"><i class="bi bi-instagram"></i></a></li>
+                                    <li><a target="_blank" href="#"><i class="bi bi-twitter"></i></a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                     <div class="flex flex-row md:flex-row lg:flex-col 2xl:flex-col gap-5 items-center justify-center">

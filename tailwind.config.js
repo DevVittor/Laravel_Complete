@@ -37,7 +37,7 @@ export default {
                 bannerxl: "600px",
                 bannerlg: "500px",
                 altura550px: "550px",
-                alturamax: "792.4px",
+                alturamax: "846px",
                 footeraltura: "52px",
                 bannerPerfilAltura: "426px",
             },

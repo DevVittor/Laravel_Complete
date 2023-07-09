@@ -6,8 +6,7 @@
 
 <main>
     <section>
-        <!--<TypeAccount/>-->
-        <Man/>
+        <Etapa3 />
     </section>
 </main>
 
